@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Sala de Aula</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Minha Sala de Aula</h1>
+            <nav>
+                <a href="#">Avisos</a>
+                <a href="#">Comunicação</a>
+                <a href="#">Chats</a>
+                <a href="#">Grupos</a>
+                <a href="#">Blogs</a>
+            </nav>
+            <input type="text" placeholder="Pesquise por um aviso" class="search">
+            <button class="filter-btn">Filtros</button>
+        </header>
+        
+        <section class="aviso-card">
+            <div class="card-header">
+                <span class="author">{{ aviso['autor'] }}</span>
+                <span class="date">{{ aviso['data'] }}</span>
+            </div>
+            <h2>{{ aviso['titulo'] }}</h2>
+            <p>{{ aviso['conteudo'] }}</p>
+            <div class="attachments">
+                <span>Anexos</span>
+                <span class="attachment-count">{{ aviso['anexos'] }}</span>
+            </div>
+            <p class="comments">{{ aviso['comentarios'] }} comentários da turma</p>
+        </section>
+        
+        <footer>
+            <button class="request-btn">Solicitar aviso aos representantes</button>
+        </footer>
+    </div>
+</body>
+</html>
