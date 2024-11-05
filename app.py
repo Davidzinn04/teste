@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     # Dados simulados para o conteúdo da página
     aviso = {
-        "autor": "Jefferson Thawan da Silva",
+        "autor": "David André Souza de lima",
         "data": "15/09/2022",
         "titulo": "RESULTADO FINAL DOS AUXÍLIOS",
         "conteudo": "A COAES divulgou o resultado dos auxílios estudantes. Segue anexos.",

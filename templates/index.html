@@ -12,27 +12,42 @@
             <h1>Minha Sala de Aula</h1>
             <nav>
                 <a href="#">Avisos</a>
-                <a href="#">Comunicação</a>
+                <a href="#" class="active">Comunicação</a>
                 <a href="#">Chats</a>
                 <a href="#">Grupos</a>
                 <a href="#">Blogs</a>
             </nav>
-            <input type="text" placeholder="Pesquise por um aviso" class="search">
-            <button class="filter-btn">Filtros</button>
+            <div class="search-container">
+                <input type="text" placeholder="Pesquise por um aviso" class="search">
+                <button class="filter-btn">Filtros</button>
+            </div>
         </header>
         
         <section class="aviso-card">
             <div class="card-header">
-                <span class="author">{{ aviso['autor'] }}</span>
-                <span class="date">{{ aviso['data'] }}</span>
-            </div>
-            <h2>{{ aviso['titulo'] }}</h2>
-            <p>{{ aviso['conteudo'] }}</p>
-            <div class="attachments">
-                <span>Anexos</span>
-                <span class="attachment-count">{{ aviso['anexos'] }}</span>
-            </div>
-            <p class="comments">{{ aviso['comentarios'] }} comentários da turma</p>
+                <div class="usuario">
+                    <img src="" alt="" class="author-img">
+                         <div class="author-info">
+                            <span class="author">{{ aviso['autor'] }}</span>
+                            <span class="date">{{ aviso['data'] }}</span>
+                        </div>
+                </div>
+              
+                <div class="conteudo">
+                    <h2>{{ aviso['titulo'] }}</h2>
+                    <p>{{ aviso['conteudo'] }}</p>
+                </div>
+              
+                <div class="card">
+                    <div class="card-body">
+                        <span>Anexos</span>
+                        <span class="attachment-count">{{ aviso['anexos'] }}</span>
+                    </div>
+                </div>
+                
+                <p class="comments">{{ aviso['comentarios'] }} comentários da turma</p>
+
+            </div> 
         </section>
         
         <footer>

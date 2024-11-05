@@ -1,5 +1,6 @@
-/* Reset básico */
-* {
+
+@media (max-width:480px){
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +18,7 @@ body {
 .container {
     width: 375px;
     height: 772px;
-    background-color: #ffffff;
+    background-color: #FCFCFC;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -33,48 +34,60 @@ header {
 header h1 {
     font-size: 18px;
     margin-bottom: 10px;
-  text-align: center;
+    text-align: center;
 }
+
 
 nav {
     display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 nav a {
-    font-size: 12px;
-    color: #484848;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Cor do texto */
+    display: inline-block;
+}
+
+nav a.active {
+    border-bottom: 2px solid gray; /* Linha cinza embaixo do link ativo */
+    color: #333; /* Cor mais escura para o item ativo */
+    font-weight: bold; /* Deixar o item ativo em negrito, se desejar */
+}
+
+.search-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    gap: 10px; /* Espaçamento entre o input e o botão */
 }
 
 .search {
-    width: 100%;
-    padding: 8px;
+    padding: 8px 12px; /* Ajuste o tamanho do input conforme necessário */
     font-size: 14px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Largura do campo de pesquisa */
 }
 
 .filter-btn {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    margin-top: 10px;
-    background-color: #ddd;
-    color: #333;
+    padding: 8px 16px; /* Ajuste o tamanho do botão conforme necessário */
+    background-color: #ffffff; /* Cor de fundo do botão */
+    color: black;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
+    border: 1px solid #ccc;
 }
 
+.filter-btn:hover {
+    background-color: #ddd; /* Cor do botão ao passar o mouse */
+}
 .aviso-card {
     padding: 16px;
-    border-bottom: 1px solid #ddd;
-    border-radius: 8px;
+    display: flex;
+    justify-content: center
 }
 
 .card-header {
@@ -86,22 +99,62 @@ nav a {
     padding: 16px;
     border-bottom: 1px solid #ddd;
     border-radius: 8px;
+    flex-direction: column;
 }
 
 .card-herader span{
     display: flex;
 }
 
-.card-header .author {
-    font-size: 14px;
+.card-header .usuario .author {
+    font-size: 16px;
     color: #333;
 }
 
-.card-header .date {
-    font-size: 12px;
+.card-header .usuario .date {
+    font-size: 10px;
     color: #888;
 }
 
+.card-header .usuario{
+    display: flex;
+    align-items: center;
+}
+
+.card-header .conteudo{
+    margin-top: 20px;
+}
+.aviso-card .card-header {
+    display: flex;
+    justify-content: space-around
+    
+}
+
+.aviso-card .author-img {
+    width: 40px;  /* Ajuste o tamanho da imagem conforme necessário */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.aviso-card .author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.aviso-card .author,
+.aviso-card .date {
+    margin: 0;
+    font-size: 14px;
+}
+
+.aviso-card .author {
+    font-weight: bold;
+}
+
+.aviso-card .date {
+    color: gray;
+}
 .aviso-card h2 {
     font-size: 16px;
     margin-bottom: 10px;
@@ -111,6 +164,16 @@ nav a {
 .aviso-card p {
     font-size: 14px;
     color: #555;
+}
+
+.card .card-body{
+    display: flex;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1.778px 0px rgba(17, 20, 20, 0.16);
+    margin-top: 20px;
 }
 
 .attachments {
@@ -138,16 +201,27 @@ nav a {
 
 footer {
     padding: 16px;
-    background-color: #f0f0f0;
+    background-color: #ffff;
     text-align: center;
+    box-shadow: #333;
+    width: 328px;
+    height: 54px;
+    display: flex;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .request-btn {
     font-size: 14px;
     padding: 10px;
     color: #333;
-    background-color: #eee;
+    background-color: #ffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
+
+}
 }
