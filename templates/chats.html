@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Sala de Aula</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='chats.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-list">
+            <div class="chat-item">
+                <img src="{{ url_for('static', filename='img/') }}" alt="Foto do autor" class="author-img">
+                <span class="chat-name">Minha Turma</span>
+                <span class="message-count">2</span>
+            </div>
+            <div class="chat-item">
+                <img src="{{ url_for('static', filename='img/') }}" alt="Foto do autor" class="author-img">
+                <span class="chat-name">Matemática - Seminário sobre...</span>
+            </div>
+            <div class="chat-item">
+                <img src="{{ url_for('static', filename='img/') }}" alt="Foto do autor" class="author-img">
+                <span class="chat-name">Grupo aleatório de estudos</span>
+                <span class="message-count">2</span>
+            </div>
+            <div class="chat-item">
+                <img src="{{ url_for('static', filename='img/') }}" alt="Foto do autor" class="author-img">
+                <span class="chat-name">Davi</span>
+                <span class="message-count">2</span>
+            </div>
+            <div class="chat-item">
+                <img src="{{ url_for('static', filename='img/') }}" alt="Foto do autor" class="author-img">
+                <span class="chat-name">Lucas</span>
+                <span class="message-count">2</span>
+                
+            </div>
+        </div>
+    </div>
+        </div>
+        <footer>
+            <img src="{{ url_for('static', filename='img/mais.png') }}" alt="botao mais" class="mais">
+            <button class="request-btn">Criar chat</button>
+        </footer>
+    </div>
+</body>
+</html>

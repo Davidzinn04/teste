@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='grupos.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% for item in items %}
+        <div class="task-card">
+            <div class="task-info">
+                <h2>{{ item.title }}</h2>
+                <p>{{ item.subject }}</p>
+            </div>
+            <div class="task-due">
+                <p>{{ item.due }}</p>
+            </div>
+            <div class="task-action">
+                <img src="{{ url_for('static', filename='img/balao-de-fala.png') }}" alt="Foto do autor" class="balao">
+                <button>{{ item.group }}</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

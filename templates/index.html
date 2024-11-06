@@ -9,16 +9,22 @@
 <body>
     <div class="container">
         <header>
-            <h1>Minha Sala de Aula</h1>
+            <div class="cabecario">
+                <a href="#"><img src="{{ url_for('static', filename='img/seta-esquerda.png') }}" alt="seta esquerda" class="seta"></a>
+                <h1>Minha Sala de Aula</h1>
+                <a href="#"><img src="{{ url_for('static', filename='img/notificacao.png') }}" alt="notificação" class="notificacao"></a>
+            </div>
+            
             <nav>
                 <a href="#">Avisos</a>
                 <a href="#" class="active">Comunicação</a>
-                <a href="#">Chats</a>
+                <a href="chats">Chats</a>
                 <a href="#">Grupos</a>
                 <a href="#">Blogs</a>
             </nav>
             <div class="search-container">
                 <input type="text" placeholder="Pesquise por um aviso" class="search">
+                <div class="divider"></div> 
                 <button class="filter-btn">Filtros</button>
             </div>
         </header>
@@ -26,31 +32,38 @@
         <section class="aviso-card">
             <div class="card-header">
                 <div class="usuario">
-                    <img src="" alt="" class="author-img">
-                         <div class="author-info">
-                            <span class="author">{{ aviso['autor'] }}</span>
-                            <span class="date">{{ aviso['data'] }}</span>
-                        </div>
+                   <img src="{{ url_for('static', filename='img/david.jpeg') }}" alt="Foto do autor" class="author-img">
+                    <div class="author-info">
+                        <span class="author">{{ aviso['autor'] }}</span>
+                        <span class="date">{{ aviso['data'] }}</span>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/opcoes.png') }}" alt="Foto do autor" class="pontos">
                 </div>
-              
+        
                 <div class="conteudo">
                     <h2>{{ aviso['titulo'] }}</h2>
                     <p>{{ aviso['conteudo'] }}</p>
                 </div>
-              
+        
                 <div class="card">
                     <div class="card-body">
-                        <span>Anexos</span>
+                        <span class="anexos">Anexos</span>
                         <span class="attachment-count">{{ aviso['anexos'] }}</span>
                     </div>
                 </div>
+        
+                <div class="linha-comentarios"></div>
+                <div class="comentarios">
+                    <img src="{{ url_for('static', filename='img/balao-de-fala.png') }}" alt="Foto do autor" class="balao">
+                    <p class="comments">{{ aviso['comentarios'] }} comentários da turma</p>
+                </div>
                 
-                <p class="comments">{{ aviso['comentarios'] }} comentários da turma</p>
 
             </div> 
         </section>
         
         <footer>
+            <img src="{{ url_for('static', filename='img/mais.png') }}" alt="botao mais" class="mais">
             <button class="request-btn">Solicitar aviso aos representantes</button>
         </footer>
     </div>
